@@ -32,6 +32,16 @@ To read CSV files and generate an output file, namely ```dataset_output.csv```, 
 ```
 python3 generate_output.py -a aggregation_method -o dataset_output.csv
 ```
+The aggregation method is utilized to combine decoding information that has been repeated five times.
+
+Available aggregation methods:
+- **mean** (Default)
+- **median**
+- **min**
+- **max**
+- **first**
+- **last**
+
 
 ## Build your own video compression dataset
 ### Requirements
