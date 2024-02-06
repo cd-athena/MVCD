@@ -6,7 +6,6 @@ Content:
 - [Dataset Characteristics](#dataset-characteristics)
 - [Usage](#usage)
 - [Build your own video compression dataset](#build-your-own-video-compression-dataset)
-  - [Requirements](#requirements)
 - [Citation](#citation)
 
 
@@ -44,7 +43,35 @@ Available aggregation methods:
 
 
 ## Build your own video compression dataset
-### Requirements
+To create the video compression dataset, make sure to install the necessary requirements.
+- [FFmpeg](https://ffmpeg.org/) (make sure that livsvtav1 is supported.)
+- [VVenC](https://github.com/fraunhoferhhi/vvenc) and [VVdeC](https://github.com/fraunhoferhhi/vvdec)
+- [EVCA](https://github.com/cd-athena/EVCA)
+- [VMAF](https://github.com/Netflix/vmaf)
+- Python and package requirements
+
+Run the following command to get the required Python packages
+```
+pip3 install -r requirements.txt
+```
+
+To calculate video complexities:
+```
+```
+
+To run encoding tasks:
+```
+```
+
+To run decoding tasks:
+```
+```
+
+To run decoding and upscaling tasks:
+```
+```
+
+
 
 ## Citation
 
