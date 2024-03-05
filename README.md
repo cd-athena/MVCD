@@ -28,7 +28,7 @@ The dataset is provided in four category files:
 
 To read CSV files and generate an output file, namely ```dataset_output.csv```, with all the necessary information, use the following command.
 ```
-python3 generate_output.py -a aggregation_method -o dataset_output.csv
+python3 generate_output.py -a aggregation_method -d decoding_device -o dataset_output.csv
 ```
 The aggregation method is utilized to combine decoding information that has been repeated five times.
 
@@ -40,6 +40,10 @@ Available aggregation methods:
 - **first**
 - **last**
 
+Available decoding devices:
+- **lenovo**
+- **mini**
+- **studio**
 
 ## Citation
 
