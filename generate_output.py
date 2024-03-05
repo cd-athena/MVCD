@@ -1,14 +1,15 @@
 import getopt, sys
 import pandas as pd
 
-options = "ha:o:"
-long_options = ["help", "aggregation=", "output="]
+options = "ha:o:d:"
+long_options = ["help", "aggregation=", "output=", "device="]
 
 
 def parse_arguments(arg):
     out_args = {
         'agg': 'mean',
-        'out': 'output.csv'
+        'out': 'output.csv',
+        'dev': 'lenovo'
     }
     try:
         arguments, values = getopt.getopt(argumentList, options, long_options)
@@ -25,6 +26,9 @@ def parse_arguments(arg):
 
             elif currentArgument in ("-o", "--output"):
                 out_args['out'] = currentValue
+
+            elif currentArgument in ("-d", "--device"):
+                out_args['dev'] = currentValue
 
     except getopt.error as err:
         print(str(err))
@@ -60,8 +64,8 @@ def main(args):
     df_complexity = pd.read_csv('Video complexity/complexity.csv')
 
     # Todo: Various Devices
-    df_decode = pd.read_csv('Decoding/decoding.csv')
-    df_upscale = pd.read_csv('Decoding and upscaling/decoding_upscaling.csv')
+    df_decode = pd.read_csv('Decoding/decoding_{}.csv'.format(input_args['dev']))
+    df_upscale = pd.read_csv('Decoding and upscaling/decoding_upscaling_{}.csv'.format(input_args['dev']))
 
     # Merge data
     df_ec = pd.merge(df_encode, df_complexity, on=['video']).reset_index(drop=True)
