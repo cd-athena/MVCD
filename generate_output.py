@@ -1,3 +1,4 @@
+import os
 import getopt, sys
 import pandas as pd
 
@@ -64,8 +65,13 @@ def main(args):
     df_complexity = pd.read_csv('Video complexity/complexity.csv')
 
     # Todo: Various Devices
-    df_decode = pd.read_csv('Decoding/decoding_{}.csv'.format(input_args['dev']))
-    df_upscale = pd.read_csv('Decoding and upscaling/decoding_upscaling_{}.csv'.format(input_args['dev']))
+
+    if os.path.exists('Decoding/decoding_{}.csv'.format(input_args['dev'])):
+        df_decode = pd.read_csv('Decoding/decoding_{}.csv'.format(input_args['dev']))
+        df_upscale = pd.read_csv('Decoding and upscaling/decoding_upscaling_{}.csv'.format(input_args['dev']))
+    else:
+        print("The decoding device is not available!")
+        return
 
     # Merge data
     df_ec = pd.merge(df_encode, df_complexity, on=['video']).reset_index(drop=True)
