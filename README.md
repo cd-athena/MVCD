@@ -55,7 +55,7 @@ If this work is helpful for your research, please consider citing MVCD.
 	volume = {2024},
 	shorttitle = {{MVCD}},
 	language = {English},
-	author = {Amirpour, H. and Ghasempour, M. and Tashtarian, F. and Afzal, S. and Hamodouche, W. and Timmerer, C.},
+	author = {Amirpour, H. and Ghasempour, M. and Tashtarian, F. and Afzal, S. and Hamidouche, W. and Timmerer, C.},
 	year = {2024},
 	keywords = {Video encoding, decoding, energy, complexity, quality},
 }
