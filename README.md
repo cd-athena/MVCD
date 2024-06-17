@@ -5,7 +5,9 @@ Content:
 - [Input Videos](#input-videos)
 - [Dataset Characteristics](#dataset-characteristics)
 - [Usage](#usage)
+- [Steps to Reproduce](#reproduce)
 - [Citation](#citation)
+
 
 
 ## Input Videos
@@ -44,6 +46,21 @@ Available decoding devices:
 - **lenovo**
 - **mini**
 - **studio**
+
+## Steps to Reproduce
+To reproduce the dataset, follow these steps:
+
+**Run the encoding script:**
+```
+python3 run_encoding.py <path_to_the_input_videos>
+```
+
+**Run the decoding script:**
+
+After the compressed files are generated, run the following command to obtain the decoding results:
+```
+python3 run_decoding.py
+```
 
 ## Citation
 
