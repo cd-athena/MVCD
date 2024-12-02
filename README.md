@@ -43,9 +43,9 @@ Available aggregation methods:
 - **last**
 
 Available decoding devices:
-- **lenovo**
-- **mini**
-- **studio**
+- **lenovo**: ThinkPad P1 Gen2 laptop, Intel Core i7-9750H CPU @ 2.60 GHz, 16 GB of RAM, running Ubuntu 22.04.3 LTS.
+- **mini**: Apple Mac Mini, Octa-core M1 processor, 16 GB of RAM, running macOS Ventura version 13.3.1.
+- **studio**: Apple Mac Studio, 20-core M1 Ultra processor, 64 GB of RAM, running macOS Ventura version 13.5.
 
 ## Steps to Reproduce
 To reproduce the dataset, follow these steps:
