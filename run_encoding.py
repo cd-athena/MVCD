@@ -39,8 +39,8 @@ for c_idx, c in enumerate(codecs):
 
                         t1 = time.time()
                         tracker.start_task('video{}'.format(cnt))
-                        cmd = ("time ffmpeg -i {}/{}.mp4 -frames {} -g {} -vf scale={}x{} -preset {} "
-                               "-c:v {} -qp {} -y {}/{}/{}.{}").format(INPUT_PATH, video, n_frames, 32, w, hh[w_idx],
+                        cmd = ("time ffmpeg -i {}/{}.mp4 -frames {} -g {} -vf \"select='not(mod(n,{}))',scale={}x{}\" -preset {} "
+                               "-c:v {} -qp {} -y {}/{}/{}.{}").format(INPUT_PATH, video, n_frames[f_idx], 32, 60 // f, w, hh[w_idx],
                                                                      presets[c_idx], c, q, BIN_PATH, c, f_name, ext[c_idx])
                         p = Popen(cmd, shell=True, stdout=PIPE, stderr=PIPE)
                         stdout, stderr = p.communicate()
